@@ -74,11 +74,8 @@ validate_ldap_uri(['ldapi://%2fsome%2fpath'])
 
 This module has been built on and tested against Puppet 3.0 and higher.
 
-The module has been tested on:
-
-* RedHat/CentOS Enterprise Linux 6/7
-
-Testing on other platforms has been light and cannot be guaranteed.
+The module should work pretty much anywhere as the custom functions are all
+pure Ruby.
 
 ## Development
 
