@@ -43,6 +43,15 @@ use or development.
 
 ### Functions
 
+#### `validate_base64`
+
+Validate a string or array of strings are correctly Base64 encoded.
+
+~~~
+validate_base64('Zm9v')
+validate_base64(['YmFy', 'YmF6'])
+~~~
+
 #### `validate_ldap_dn`
 
 Validate a string or array of strings are valid LDAP distinguished names.
