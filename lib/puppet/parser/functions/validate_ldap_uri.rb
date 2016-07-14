@@ -15,6 +15,7 @@ module URI
 end
 
 if RUBY_VERSION < '1.9'
+  # :nocov:
   module URI
     class << self
       # This is an almost-duplicate of the method as found in 1.8.7
@@ -41,6 +42,7 @@ if RUBY_VERSION < '1.9'
       end
     end
   end
+  # :nocov:
 end
 
 module Puppet::Parser::Functions

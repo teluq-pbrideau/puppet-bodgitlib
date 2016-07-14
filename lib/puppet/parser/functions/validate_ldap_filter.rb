@@ -3,12 +3,14 @@
 #
 
 if RUBY_VERSION < '1.9'
+  # :nocov:
   begin
     require 'oniguruma'
   rescue LoadError
     require 'rubygems'
     retry
   end
+  # :nocov:
 end
 
 module Puppet::Parser::Functions
@@ -92,7 +94,9 @@ module Puppet::Parser::Functions
     EOR
 
     if RUBY_VERSION < '1.9'
+      # :nocov:
       filter = Oniguruma::ORegexp.new(re, :options => Oniguruma::OPTION_EXTEND)
+      # :nocov:
     else
       filter = Regexp.new(re, Regexp::EXTENDED)
     end
