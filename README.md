@@ -52,6 +52,33 @@ validate_base64('Zm9v')
 validate_base64(['YmFy', 'YmF6'])
 ~~~
 
+#### `validate_ip_address_array`
+
+Validate an array of IP addresses using `validate_ip_address` to do the
+heavy lifting.
+
+~~~
+validate_ip_address_array(['1.2.3.4', 'dead::beef'])
+~~~
+
+#### `validate_ipv4_address_array`
+
+Validate an array of IPv4 addresses using `validate_ipv4_address` to do the
+heavy lifting.
+
+~~~
+validate_ipv4_address_array(['1.2.3.4', '5.6.7.8'])
+~~~
+
+#### `validate_ipv6_address_array`
+
+Validate an array of IPv6 addresses using `validate_ipv6_address` to do the
+heavy lifting.
+
+~~~
+validate_ipv6_address_array(['dead::beef', 'feed::beef'])
+~~~
+
 #### `validate_ldap_dn`
 
 Validate a string or array of strings are valid LDAP distinguished names.
