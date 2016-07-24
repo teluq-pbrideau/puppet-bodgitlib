@@ -52,6 +52,16 @@ validate_base64('Zm9v')
 validate_base64(['YmFy', 'YmF6'])
 ~~~
 
+#### `validate_domain_name`
+
+Validate a string or array of strings are all valid domain names using
+`is_domain_name`.
+
+~~~
+validate_domain_name('example.com')
+validate_domain_name(['example.com', 'example.org'])
+~~~
+
 #### `validate_ip_address_array`
 
 Validate an array of IP addresses using `validate_ip_address` to do the
