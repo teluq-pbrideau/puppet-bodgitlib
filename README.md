@@ -109,11 +109,14 @@ validate_ldap_filter(['(&(objectClass=Person)(|(sn=Jensen)(cn=Babs J*)))'])
 
 #### `validate_ldap_uri`
 
-Validate a string or array of strings are valid LDAP URI's.
+Validate a string or array of strings are valid LDAP URI's. If there is a DN
+or filter passed then these are validated with `validate_ldap_dn` and
+`validate_ldap_filter` respectively.
 
 ~~~
 validate_ldap_uri('ldap://example.com')
 validate_ldap_uri(['ldapi://%2fsome%2fpath'])
+validate_ldap_uri('ldap:///dc=example,dc=com?uidNumber?sub?(sn=e*)')
 ~~~
 
 ## Limitations

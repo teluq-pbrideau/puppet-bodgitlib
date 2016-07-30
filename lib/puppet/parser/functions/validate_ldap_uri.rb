@@ -84,6 +84,13 @@ module Puppet::Parser::Functions
         else
           raise
         end
+        function_validate_ldap_dn([u.dn]) if u.dn and u.dn.length > 0
+        # FIXME validate attributes
+        if u.scope
+          raise unless ['sub', 'one', 'base'].include?(u.scope)
+        end
+        function_validate_ldap_filter([u.filter]) if u.filter
+        # FIXME validate extensions
       rescue
         raise(Puppet::ParseError, "#{i.inspect} is not a valid LDAP URI")
       end

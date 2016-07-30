@@ -17,4 +17,9 @@ describe 'validate_ldap_uri' do
       'ldapi://%2fexample%2fcom',
     ])
   }
+  it { should run.with_params('ldap:///') }
+  it { expect { should run.with_params('ldap:///invalid') }.to raise_error(/is not a valid LDAP URI/) }
+  it { expect { should run.with_params('ldap:///dc=example,dc=com?uidNumber?invalid') }.to raise_error(/is not a valid LDAP URI/) }
+  it { expect { should run.with_params('ldap:///dc=example,dc=com?uidNumber?sub?invalid') }.to raise_error(/is not a valid LDAP URI/) }
+  it { should run.with_params('ldap:///dc=example,dc=com?uidNumber?sub?(sn=e*)') }
 end
