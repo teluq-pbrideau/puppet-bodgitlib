@@ -76,7 +76,7 @@ module Puppet::Parser::Functions
         u = URI(i)
         case u.scheme
         when 'ldap', 'ldaps'
-          raise if u.host.nil?
+          # Do nothing
         when 'ldapi'
           if not u.host.nil?
             raise if not Pathname.new(URI.unescape(u.host)).absolute?
