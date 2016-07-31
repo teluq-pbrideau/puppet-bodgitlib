@@ -107,6 +107,17 @@ validate_ldap_filter('(!(cn=Tim Howes))')
 validate_ldap_filter(['(&(objectClass=Person)(|(sn=Jensen)(cn=Babs J*)))'])
 ~~~
 
+#### `validate_ldap_sub_dn`
+
+Validate a string or array of strings are valid LDAP distinguished names and
+that they are all either an exact match or a subtree of another given
+distinguished name.
+
+~~~
+validate_ldap_sub_dn('dc=example,dc=com', 'ou=groups,dc=example,dc=com')
+validate_ldap_sub_dn('dc=example,dc=com', ['ou=people,dc=example,dc=com'])
+~~~
+
 #### `validate_ldap_uri`
 
 Validate a string or array of strings are valid LDAP URI's. If there is a DN
