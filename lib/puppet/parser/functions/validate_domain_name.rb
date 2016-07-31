@@ -11,7 +11,7 @@ module Puppet::Parser::Functions
 
     rescuable_exceptions = [ArgumentError]
 
-    raise Puppet::ParserError, 'validate_domain_name(): Wrong number of ' +
+    raise Puppet::ParseError, 'validate_domain_name(): Wrong number of ' +
       "arguments given (#{arguments.size} for 1)" if arguments.size != 1
 
     item = arguments[0]

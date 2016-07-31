@@ -52,7 +52,7 @@ module Puppet::Parser::Functions
     EOS
   ) do |arguments|
 
-    raise(Puppet::ParserError, 'validate_ldap_uri(): Wrong number of ' +
+    raise(Puppet::ParseError, 'validate_ldap_uri(): Wrong number of ' +
       "arguments given (#{arguments.size} for 1)") if arguments.size != 1
 
     item = arguments[0]

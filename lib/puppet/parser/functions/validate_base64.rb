@@ -11,7 +11,7 @@ module Puppet::Parser::Functions
     EOS
   ) do |arguments|
 
-    raise(Puppet::ParserError, 'validate_base64(): Wrong number of ' +
+    raise(Puppet::ParseError, 'validate_base64(): Wrong number of ' +
       "arguments given (#{arguments.size} for 1)") if arguments.size != 1
 
     item = arguments[0]

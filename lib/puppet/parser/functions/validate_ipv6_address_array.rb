@@ -8,7 +8,7 @@ module Puppet::Parser::Functions
     EOS
   ) do |arguments|
 
-    raise(Puppet::ParserError, 'validate_ipv6_address_array(): Wrong number ' +
+    raise(Puppet::ParseError, 'validate_ipv6_address_array(): Wrong number ' +
       "of arguments given (#{arguments.size} for 1)") if arguments.size != 1
 
     item = arguments[0]
