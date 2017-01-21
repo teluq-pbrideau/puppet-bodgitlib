@@ -14,6 +14,7 @@ group :development, :test do
   gem 'librarian-puppet',               :require => false
   gem 'rspec-puppet-facts', '>= 1.1.1', :require => false
   gem 'coveralls',                      :require => false
+  gem 'puppet-strings',                 :require => false
 end
 
 if RUBY_VERSION < '1.9'

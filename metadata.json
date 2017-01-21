@@ -1,6 +1,6 @@
 {
   "name": "bodgit-bodgitlib",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "bodgit",
   "summary": "Additional library of resources for Puppet modules.",
   "license": "Apache-2.0",
@@ -42,6 +42,29 @@
         "5",
         "6",
         "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04",
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "OpenBSD",
+      "operatingsystemrelease": [
+        "5.9",
+        "6.0"
       ]
     }
   ],
