@@ -8,15 +8,20 @@ if Puppet.version.to_f >= 4.4
         '(!(cn=Tim Howes))',
         '(&(objectClass=Person)(|(sn=Jensen)(cn=Babs J*)))',
         '(o=univ*of*mich*)',
-        '(cn:1.2.3.4.5:=Fred Flintstone)',
+        '(seeAlso=)',
+        '(cn:caseExactMatch:=Fred Flintstone)',
+        '(cn:=Betty Rubble)',
         '(sn:dn:2.4.6.8.10:=Barney Rubble)',
         '(o:dn:=Ace Industry)',
-        '(:dn:2.4.6.8.10:=Dino)',
+        '(:1.2.3:=Wilma Flintstone)',
+        '(:DN:2.4.6.8.10:=Dino)',
         '(o=Parens R Us \28for all your parenthetical needs\29)',
         '(cn=*\2A*)',
         '(filename=C:\5cMyFile)',
         '(bin=\00\00\00\04)',
         '(sn=Lu\c4\8di\c4\87)',
+        '(1.3.6.1.4.1.1466.0=\04\02\48\69)',
+        '(&(sAMAccountName=%u)(!(memberOf=cn=groupname,ou=User Security Groups,ou=Users,dc=my,dc=example,dc=com)))',
       ].each do |value|
         describe value.inspect do
           let(:params) {{ value: value }}
