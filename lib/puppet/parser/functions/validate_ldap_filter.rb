@@ -23,7 +23,7 @@ module Puppet::Parser::Functions
     raise(Puppet::ParseError, 'validate_ldap_filter(): Wrong number of ' +
       "arguments given (#{arguments.size} for 1)") if arguments.size != 1
 
-    # RFC 2254
+    # RFC 2254/4515
     re = <<-'EOR'
     ^
     (?<re>
@@ -45,29 +45,12 @@ module Puppet::Parser::Functions
               )*
             )
             [~<>]? =
-            # Not sure this is 100% correct
             (?<value>
               (?:
-                \# (?: [[:xdigit:]]{2} )+
+                [^\\()*]
                 |
-                (?:
-                  [^,=+<>#;\\"()*]
-                  |
-                  \\ [,=\+<>#;\\"]
-                  |
-                  \\ [[:xdigit:]]{2}
-                )*
-                |
-                "
-                (?:
-                  [^\\"]
-                  |
-                  \\ [,=\+<>#;\\"]
-                  |
-                  \\ [[:xdigit:]]{2}
-                )*
-                "
-              )
+                \\ [[:xdigit:]]{2}
+              )*
             )
             |
             \g<attr> = \*
@@ -80,11 +63,20 @@ module Puppet::Parser::Functions
                 :
                 (?<rule>
                   [[:digit:]]+ (?: \. [[:digit:]]+ )*
+                  |
+                  [[:alpha:]] [[:alnum:]]* Match
                 )
               )?
               := \g<value>
               |
-              (?: :dn )? : \g<rule> := \g<value>
+              (?:
+                :
+                (?:
+                  dn
+                  |
+                  DN
+                )
+              )? : \g<rule> := \g<value>
             )
           )
         )
