@@ -1,2 +1,2 @@
 # @since 1.8.0
-type Bodgitlib::Zone = Pattern[/(?x) ^ (?: (?= [a-z0-9.-]{2,255} ) ( (?= [a-z0-9-]{1,63} \. ) [a-z0-9]+ ( - [a-z0-9]+ )* \. )* [a-z]{2,63} )? \. $/]
+type Bodgitlib::Zone = Variant[Bodgitlib::Zone::Root, Bodgitlib::Zone::NonRoot]
