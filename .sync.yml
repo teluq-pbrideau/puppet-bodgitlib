@@ -21,5 +21,5 @@ Rakefile:
   linter_fail_on_warnings: true
 spec/spec_helper.rb:
   mock_with: ':rspec'
-  coverage_report: true
+  coverage_report: false
   minimum_code_coverage_percentage: 100
