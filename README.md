@@ -1,51 +1,46 @@
 # bodgitlib
 
-Tested with Travis CI
-
 [![Build Status](https://travis-ci.org/bodgit/puppet-bodgitlib.svg?branch=master)](https://travis-ci.org/bodgit/puppet-bodgitlib)
-[![Coverage Status](https://coveralls.io/repos/bodgit/puppet-bodgitlib/badge.svg?branch=master&service=github)](https://coveralls.io/github/bodgit/puppet-bodgitlib?branch=master)
-[![Puppet Forge](http://img.shields.io/puppetforge/v/bodgit/bodgitlib.svg)](https://forge.puppetlabs.com/bodgit/bodgitlib)
-[![Dependency Status](https://gemnasium.com/bodgit/puppet-bodgitlib.svg)](https://gemnasium.com/bodgit/puppet-bodgitlib)
+[![Codecov](https://img.shields.io/codecov/c/github/bodgit/puppet-bodgitlib)](https://codecov.io/gh/bodgit/puppet-bodgitlib)
+[![Puppet Forge version](http://img.shields.io/puppetforge/v/bodgit/bodgitlib)](https://forge.puppetlabs.com/bodgit/bodgitlib)
+[![Puppet Forge downloads](https://img.shields.io/puppetforge/dt/bodgit/bodgitlib)](https://forge.puppetlabs.com/bodgit/bodgitlib)
+[![Puppet Forge - PDK version](https://img.shields.io/puppetforge/pdk-version/bodgit/bodgitlib)](https://forge.puppetlabs.com/bodgit/bodgitlib)
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with bodgitlib](#setup)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
+1. [Description](#description)
+2. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+3. [Limitations - OS compatibility, etc.](#limitations)
+4. [Development - Guide for contributing to the module](#development)
 
-## Overview
-
-This module is in a similar vein to the stdlib module, a library of resources
-for Puppet modules.
-
-## Module Description
+## Description
 
 This module provides a standard library of resources for the development of
 Puppet modules.
 
-## Setup
+## Reference
 
-If you're still using Ruby 1.8.7 then you need to install the Oniguruma gem to
-get improved Regexp support. This only needs to be on the Puppetmaster or any
-standalone nodes. This could be as simple as `gem install oniguruma` or
-installing a package provided by your Operating System.
-
-## Usage
-
-After you've installed bodgitlib, all of its functions are available for module
-use or development.
+The reference documentation is generated with
+[puppet-strings](https://github.com/puppetlabs/puppet-strings) and the latest
+version of the documentation is hosted at
+[https://bodgit.github.io/puppet-bodgitlib/](https://bodgit.github.io/puppet-bodgitlib/)
+and available also in the [REFERENCE.md](https://github.com/bodgit/puppet-bodgitlib/blob/master/REFERENCE.md).
 
 ## Limitations
 
-This module has been built on and tested against Puppet 3.0 and higher.
+This module has been built on and tested against Puppet 5 and higher.
 
-The module should work pretty much anywhere as the custom functions are all
-pure Ruby.
+The module should work anywhere as everything is written in the Puppet
+language.
 
 ## Development
+
+The module relies on [PDK](https://puppet.com/docs/pdk/1.x/pdk.html) and has
+[rspec-puppet](http://rspec-puppet.com) tests. Run them with:
+
+```
+$ bundle exec rake spec
+```
 
 Please log issues or pull requests at
 [github](https://github.com/bodgit/puppet-bodgitlib).
