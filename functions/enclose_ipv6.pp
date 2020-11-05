@@ -2,7 +2,7 @@
 function bodgitlib::enclose_ipv6(String $host) {
 
   type($host) ? {
-    Type[IP::Address::V6::NoSubnet] => "[${host}]",
-    default                         => $host,
+    Type[Stdlib::IP::Address::V6::NoSubnet] => "[${host}]",
+    default                                 => $host,
   }
 }
