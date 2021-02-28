@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.1](https://github.com/bodgit/puppet-bodgitlib/tree/v3.0.1) (2021-02-28)
+
+[Full Changelog](https://github.com/bodgit/puppet-bodgitlib/compare/v3.0.0...v3.0.1)
+
+### Added
+
+- Support Puppet 7.x [\#19](https://github.com/bodgit/puppet-bodgitlib/pull/19) ([bodgit](https://github.com/bodgit))
+- Update to PDK 2.0.0 [\#18](https://github.com/bodgit/puppet-bodgitlib/pull/18) ([bodgit](https://github.com/bodgit))
+
 ## [v3.0.0](https://github.com/bodgit/puppet-bodgitlib/tree/v3.0.0) (2020-11-05)
 
 [Full Changelog](https://github.com/bodgit/puppet-bodgitlib/compare/v2.0.1...v3.0.0)
