@@ -6,12 +6,28 @@ appveyor.yml:
 .gitlab-ci.yml:
   delete: true
 .travis.yml:
+  includes:
+     - env: CHECK="check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop syntax lint metadata_lint"
+       stage: static
+     - env: PUPPET_GEM_VERSION="~> 5.0" CHECK=parallel_spec
+       rvm: 2.4.5
+       stage: spec
+     - env: PUPPET_GEM_VERSION="~> 6.0" CHECK=parallel_spec
+       rvm: 2.5.7
+       stage: spec
+     - env: PUPPET_GEM_VERSION="~> 7.0" CHECK=parallel_spec
+       rvm: 2.7.2
+       stage: spec
   notifications:
     email: true
   secure: 'zJArAhngQ5/BN/EL+UXLQEb6VjqwKlHx5cWirhIqotZltFlBY43reqlneJT7nxZggckk6oJHhSFnPFE2pSA0mpdLJN4c64SBzreRYYOGN9xs6ZsZ41NRImhWivgAjtC5FIr2ZZbIEDv+I5atiUhEQ07dZjX9X3K3O7xStSSaojjZ1e1hv13VRy7QC0xlRapElPi/hQ5hNvieNXouFIe0rj36mGEsNSdDDwr75pZxlbIIoEG3X/YefnDVq34VH9AAw8tNUu6Co+dxX7uBKDFbBp0kuzgMcGAjqtQ5wlK5h2aP/29c8nB1d0Q38vbKHPK3Q8jE26jIpEJ5sRe7QDajXD7/UVJUX0Klrk7l8WxwCZe2AWBM6/35Xt4W/rBToMG4sKjmVBkhdv3hcUy9Gp43mOP0BlRefDZ1YOrPFVxd57Vwba1naCdGbEuDPMgWnepQGIShLmPNqHnAy21wvX0k/X6QYEDwbcgZeJSJkQ9SI4dagdeYPTRERYmsvI6yBhUtsaZ7xk25rUKTdN6gTnaz2UO6z0sd+V94semPYM8udL6VVFPUP+LGTzZrAN+byFFNhsNx8bx2MIyFK6MynKjPhr/eP84iRdoV2XxBrlZQpbJpgAqq29odYa3sHRPOM4L40/IS4+nQudaMcHdWh8I0F2ERtdushf9AWbm2pJtgrNw='
   simplecov: true
   user: 'bodgit'
 .vscode/extensions.json:
+  delete: true
+.devcontainer/Dockerfile:
+  delete: true
+.devcontainer/devcontainer.json:
   delete: true
 Gemfile:
   optional:
