@@ -1,6 +1,6 @@
 # bodgitlib
 
-[![Build Status](https://travis-ci.org/bodgit/puppet-bodgitlib.svg?branch=master)](https://travis-ci.org/bodgit/puppet-bodgitlib)
+[![Build Status](https://img.shields.io/github/workflow/status/bodgit/puppet-bodgitlib/Test)](https://github.com/bodgit/puppet-bodgitlib/actions?query=workflow%3ATest)
 [![Codecov](https://img.shields.io/codecov/c/github/bodgit/puppet-bodgitlib)](https://codecov.io/gh/bodgit/puppet-bodgitlib)
 [![Puppet Forge version](http://img.shields.io/puppetforge/v/bodgit/bodgitlib)](https://forge.puppetlabs.com/bodgit/bodgitlib)
 [![Puppet Forge downloads](https://img.shields.io/puppetforge/dt/bodgit/bodgitlib)](https://forge.puppetlabs.com/bodgit/bodgitlib)
@@ -24,7 +24,7 @@ The reference documentation is generated with
 [puppet-strings](https://github.com/puppetlabs/puppet-strings) and the latest
 version of the documentation is hosted at
 [https://bodgit.github.io/puppet-bodgitlib/](https://bodgit.github.io/puppet-bodgitlib/)
-and available also in the [REFERENCE.md](https://github.com/bodgit/puppet-bodgitlib/blob/master/REFERENCE.md).
+and available also in the [REFERENCE.md](https://github.com/bodgit/puppet-bodgitlib/blob/main/REFERENCE.md).
 
 ## Limitations
 
