@@ -1,6 +1,6 @@
 {
   "name": "bodgit-bodgitlib",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "author": "bodgit",
   "summary": "Additional library of resources for Puppet modules.",
   "license": "Apache-2.0",
