@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.3](https://github.com/bodgit/puppet-bodgitlib/tree/v3.0.3) (2021-12-17)
+
+[Full Changelog](https://github.com/bodgit/puppet-bodgitlib/compare/v3.0.2...v3.0.3)
+
+### Added
+
+- Allow stdlib v8 [\#21](https://github.com/bodgit/puppet-bodgitlib/pull/21) ([sazzle2611](https://github.com/sazzle2611))
+
 ## [v3.0.2](https://github.com/bodgit/puppet-bodgitlib/tree/v3.0.2) (2021-07-06)
 
 [Full Changelog](https://github.com/bodgit/puppet-bodgitlib/compare/v3.0.1...v3.0.2)
